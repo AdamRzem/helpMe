@@ -8,7 +8,9 @@
 
 	initializeStores();
 </script>
-
+<svelte:head>
+	<title>helpMe</title>
+</svelte:head>
 <AppShell>
 	<svelte:fragment slot="header">
 		<AppBar

@@ -1,11 +1,10 @@
 <script lang="ts">
 	import { PUBLIC_GMA } from '$env/static/public';
-	import { app, auth, db } from '$lib/db';
+	import { auth, db } from '$lib/db';
 	import { Loader } from '@googlemaps/js-api-loader';
 	import {
 		Modal,
 		getModalStore,
-		type ModalStore,
 		type ModalSettings
 	} from '@skeletonlabs/skeleton';
 	import { GeoPoint, addDoc, collection, deleteDoc, getDocs, query } from 'firebase/firestore';
@@ -48,8 +47,8 @@
 						const modal_logged: ModalSettings = {
 							type: 'confirm',
 							// Data
-							title: 'Please Confirm',
-							body: 'Are you sure you wish to proceed?',
+							title: 'Pomoc',
+							body: 'Potwierdź chęć udzielenia pomocy tej osobie?',
 							async response(r) {
 								if (r) {
 									await deleteDoc(e.ref);

@@ -24,12 +24,12 @@
 		const loc = navigator.geolocation.getCurrentPosition(
 			async (e) => {
 				await addDoc(col, { cords: new GeoPoint(e.coords.latitude, e.coords.longitude), name: n });
+        n = '';
 			},
 			(f) => {
 				alert('err');
 			}
 		);
-		n = '';
 	}
 </script>
 
