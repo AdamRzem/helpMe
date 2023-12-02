@@ -70,7 +70,7 @@
 		</svelte:fragment>
 
 		<div class="flex justify-content w-full h-full">
-			<img class="justify-center" src="icon-rectangle-NoBg.png" alt="logo" />
+			<img class="justify-center" src="/icon-rectangle-NoBg.png" alt="logo" />
 		</div>
 		<svelte:fragment slot="pageFooter">
 			<div

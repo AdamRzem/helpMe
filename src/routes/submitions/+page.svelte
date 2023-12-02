@@ -2,31 +2,12 @@
 	import { db } from '$lib/db';
 	import { AppShell } from '@skeletonlabs/skeleton';
 	import { addDoc, collection } from 'firebase/firestore';
-    import { onMount } from 'svelte';
-    import { getDatabase, ref, onValue } from 'firebase/database';
-
-
+	
 	let im: string;
 	let nz: string;
 	let mi: string;
 	let ul: string;
 	let nr: string;
-
-
-    let data = [];
-
-    const database = getDatabase();
-    const usersRef = ref(database, 'vols');
-
-  onMount(() => {
-    onValue(usersRef, (snapshot) => {
-      const userData = snapshot.val();
-      if (userData) {
-        data = Object.values(userData);
-      }
-    });
-  });
-
 </script>
 
 <AppShell>
@@ -79,16 +60,8 @@
 				id="kitty"
 			/>
 		</form>
-        
+        <a href="./vols">Cehck vols</a>
 	</div>
-    <div class="flex justify-center w-full h-96">
-    <!-- <button class="btn text-black bg-slate-100 w-52 h-9 rounded-full" on:click={}>Pokaż innych wolontariuszy</button> -->
-</div>
-<ol class="flex">
-    {#each data as vols (vols.id)}
-      <li class="text-white">{vols.im} , {vols.mi}, {vols.nr}, {vols.nz}, {vols.ul}</li>
-    {/each}
-  </ol>
 </AppShell>
 
 <style>
