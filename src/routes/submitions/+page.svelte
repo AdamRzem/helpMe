@@ -60,8 +60,9 @@
 				id="kitty"
 			/>
 		</form>
-        <a href="./vols">Cehck vols</a>
+        <a href="./submitions/vols" class="btn bg-slate-100 rounded-full h-7 text-black ">Cehck vols</a>
 	</div>
+    
 </AppShell>
 
 <style>
