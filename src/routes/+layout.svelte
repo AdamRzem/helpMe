@@ -24,7 +24,7 @@
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 
-				<LightSwitch slot="end" class="mx-6" /> 
+				<LightSwitch slot="end" class="mx-7" /> 
 
 				<a href="/map"
 					><button type="button" class="btn variant-filled rounded-full w-60">

@@ -12,13 +12,15 @@
 </script>
 
 {#await docs then adocs}
+<ol>
 	{#each adocs.docs as doc}
-		<p>
+		<li class="list-item">
 			{doc.data()['im']}
 			{doc.data()['nz']}
 			{doc.data()['mi']}
 			{doc.data()['ul']}
 			{doc.data()['nr']}
-		</p>
+		</li>
 	{/each}
+</ol>
 {/await}
